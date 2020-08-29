@@ -27,16 +27,39 @@ fn main() {
     // booleano
     let _f: bool = true;
 
+    // Strings
+    // https://doc.rust-lang.org/stable/rust-by-example/std/str.html
+    println!("\n\t ---- Strings -----");
+    let mut string_mutavel: String = String::new(); // string mutável
+    string_mutavel.push_str("lalala: ");
+    string_mutavel.push_str("oioi");
+    println!("{}", string_mutavel);
+
+    let s = String::from("Teste lalal"); // string imutável
+    // s.push_str("lalala: "); // invalido
+    println!("{}", s);
+    
+    
+
     // coleções
-    // arrays
+    // arrays - Imutáveis
     println!("\n\t ---- Arrays -----");
     let xs: [i32; 5] = [1, 2, 3, 4, 5]; // arrays são de tamanho fixo. Posso assinar i32 e ter valor padrão 5 (opcional)
     println!("tamanho do array: {}", xs.len());
     println!("Segundo elemento: {}", xs[1]);
+
+    // Vetor - Mutáveis
+    println!("\n\t ---- Vetores -----");
+    let mut vec = Vec::new();
+    vec.push(12);
+    vec.push(345);
+    println!("{:?}", vec);
 
     // tuplas
     let par = (1, true);
     println!("\n\t ---- Tuplas -----");
     println!("par {:?}", par);
     println!("Primeiro Elemento: {}", par.0);
+
+    // 
 }
